@@ -9,7 +9,7 @@ var Sys = require("sys"),
     Fs  = require("fs"),
     Parser = require("cloud9/optparse"),
     parser = new Parser({
-        w: { key: "workspace", hint: "WORKSPACE_DIR ('{def}')", def: "." },
+        w: { key: "workspace", hint: "WORKSPACE_DIR ('{def}')", def: "mnt" },
         p: { key: "port", parser: parseInt, hint: "PORT ({def})", def: 3000 },
         l: { key: "ip", hint: "LISTEN_IP ('{def}')", def: "127.0.0.1" },
         a: { key: "action", hint: "ACTION", def:null, parser: function(value) {
