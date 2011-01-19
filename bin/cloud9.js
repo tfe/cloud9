@@ -3,7 +3,7 @@
  * @copyright 2010, Ajax.org B.V.
  * @license GPLv3 <http://www.gnu.org/licenses/gpl.txt>
  */
-require ("../support/paths");
+require ("./support/paths");
 
 var Sys = require("sys"),
     Fs  = require("fs"),
@@ -33,7 +33,7 @@ if (parseInt(process.version.split(".")[1]) < 2) {
 }
 
 var options = parser.parseArguments(process.argv.slice(2));
-var version = JSON.parse(Fs.readFileSync(__dirname + "/../package.json")).version;
+var version = JSON.parse(Fs.readFileSync(__dirname + "/package.json")).version;
 
 require("cloud9").main(options);
 
