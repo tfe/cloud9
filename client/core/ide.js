@@ -94,15 +94,7 @@ require.def("core/ide", ["core/document", "/socket.io/socket.io.js"],
             // fire up the socket connection:
             var options = {
                 rememberTransport: false,
-                transports:  ["websocket", /*"flashsocket",*/ "htmlfile", "xhr-multipart", "xhr-polling", "jsonp-polling"],
-                transportOptions: {
-                    "xhr-polling": {
-                        timeout: 30000
-                    },
-                    "jsonp-polling": {
-                        timeout: 30000
-                    }
-                }
+                transports:  ["websocket"]
             };
 
             ide.socketConnect = function() {
